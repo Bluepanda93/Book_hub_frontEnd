@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+body {
+  background: rgba(0, 0, 0, 0.4)
+ url("./images/booksource.jpg");
+  background-repeat: none;
+  background-size: cover;
+  background-blend-mode: darken;
+
+  object-position: center center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap");
+* {
+  font-family: "League Spartan", sans-serif;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+ font-size: 20px;
+  padding: 1em;
   color: white;
+  min-height: 2em;
+  /* background: white; */
+ 
 }
 
-.App-link {
-  color: #61dafb;
+.navbar a {
+  text-decoration: none;
+  position: relative;
+  color: white;
+  padding-left: 40px;
+  margin-left: 0.5em;
+  margin-right: 1em;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.linky::after {
+  position: absolute;
+  content: " ";
+  background-color: #e09f3e;
+  width: 75%;
+  height: 2px;
+  left: 9px;
+  bottom: -5px;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 250ms ease-in;
+  /* left: 2px; */
+}
+
+.linky:hover::after {
+  transform: scaleX(1);
+}
+
+.review-btn{
+  padding: 8px 15px;
+  background: #f2e9e4;
+color: #e09f3e;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.review-btn:hover{
+background-color: #a26914;
+transition: 0.4s;
+color: white;
+}
+
+.column-1{
+  display: flex;
+  justify-content: center;
+align-items: center;
 }
