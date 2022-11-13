@@ -1,8 +1,7 @@
 import Navbar from './components/Navbar'
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
-import Home from './components/Home'
-import Login from './components/Login'
+import Home from './pages/Home'
 
 const App = () => {
   return (
@@ -11,9 +10,6 @@ const App = () => {
         <Navbar />
       </header>
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
         <Home />
       </main>
     </div>

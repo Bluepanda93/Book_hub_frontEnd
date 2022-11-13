@@ -112,12 +112,9 @@ flex-wrap: wrap;
   width: 30vw;
 }
 
+
 .login-btn{
-  flex-basis: 100%;
-  height: 0;
-}
-.login-btn button{
-margin-left: 50%;
+
 background: #e09f3e;
 border: none;
 padding: 12px 20px;
@@ -128,7 +125,7 @@ box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.2);
 color: white;
 }
 
-.login-btn button:hover{
+.login-btn:hover{
   color:  #f2e9e4;
   background-color: #a4680e;
   transition: 0.4s;

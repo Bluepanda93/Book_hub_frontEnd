@@ -1,12 +1,14 @@
 import React from 'react'
 
-import './Login.css'
+import './styles/Login.css'
 
 const Login = (props) => {
   return props.trigger ? (
     <div className="popup-form">
       <div className="popup-inner">
-        <button className="close-btn">X</button>
+        <button className="close-btn" onClick={() => props.setTrigger(false)}>
+          X
+        </button>
         <div className="signin col">
           <div className="card-overlay centered">
             <form className="col">
