@@ -81,4 +81,55 @@ color: white;
   display: flex;
   justify-content: center;
 align-items: center;
+height: 80vh;
+}
+
+.home-h1{
+  color: white;
+  font-size: 40px;
+
+}
+
+.span-heading{
+  color: #efa332;
+  font-style: italic;
+
+  background-color: #ffffff;
+  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.4);
+  padding: 16px 10px 10px 10px;
+}
+.column-2{
+display: flex;
+flex-wrap: wrap;
+  justify-content: center;
+  
+ transform: translateY(-240px);
+}
+.home-paragraph{
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  width: 30vw;
+}
+
+.login-btn{
+  flex-basis: 100%;
+  height: 0;
+}
+.login-btn button{
+margin-left: 50%;
+background: #e09f3e;
+border: none;
+padding: 12px 20px;
+border-radius: 12px;
+cursor: pointer;
+font-size: 20px;
+box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.2);
+color: white;
+}
+
+.login-btn button:hover{
+  color:  #f2e9e4;
+  background-color: #a4680e;
+  transition: 0.4s;
 }
