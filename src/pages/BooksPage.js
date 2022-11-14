@@ -19,10 +19,22 @@ const Books = () => {
     useEffect(() => {
         getBooks()
     }, [])
+
     return (
         <div>
             <h1>This is the books page</h1>
+            <div className="booksHolder">
+                {books.map((book) => (
+                    <div key={book._id}>
+                        <h2>{book.title}</h2>
+                        <h3>{book.author}</h3>
+                        <h3>{book.genre}</h3>
+                    </div>
+                ))}
+            </div>
         </div>
+
+
     )
 }
 
