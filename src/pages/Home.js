@@ -8,7 +8,7 @@ const Home = () => {
       <Login trigger={popupButton} setTrigger={setPopupButton}></Login>
       <div className="column-1">
         <h1 className="home-h1">
-          WELCOME TO <span className="span-heading">BOOK HUB.</span>
+          WELCOME TO <span className="span-heading">BOOK HUB</span>
           <br></br>
           <button onClick={() => setPopupButton(true)} className="login-btn">
             Log In
