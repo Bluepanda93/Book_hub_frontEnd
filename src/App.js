@@ -5,17 +5,19 @@ import Home from './pages/Home'
 import Books from './pages/BooksPage'
 const App = () => {
   return (
-    <div className="page">
-      <header>
-        <Navbar />
-      </header>
-      <main>
-        <Home />
+    <div>
+      <div className="page">
+        <header>
+          <Navbar />
+        </header>
+
+      </div>
+      <div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/books" element={<Books />} />
         </Routes>
-      </main>
+      </div>
     </div>
   )
 }
