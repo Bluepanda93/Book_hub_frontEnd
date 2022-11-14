@@ -1,8 +1,11 @@
+import { useEffect, useState } from 'react'
 import React from 'react'
-
+import { useNavigate } from 'react-router-dom'
 import './styles/Login.css'
 
+
 const Login = (props) => {
+
   return props.trigger ? (
     <div className="popup-form">
       <div className="popup-inner">
