@@ -6,21 +6,7 @@ import { useNavigate } from 'react-router-dom'
 
 
 const Home = () => {
-  const [books, setBooks] = useState([])
 
-  const getBooks = async () => {
-    try {
-      let response = await axios.get('http://localhost:3001/api/books/all_books')
-      console.log(response.data)
-      setBooks(response.data)
-    } catch (error) {
-      console.log(error)
-    }
-
-  }
-  useEffect(() => {
-    getBooks()
-  }, [])
   const [popupButton, setPopupButton] = useState(false)
   return (
     <div className="home-container">
