@@ -25,6 +25,7 @@ const NewBookForm = () => {
       .catch((error) => {
         console.log(error)
       })
+
     // updateBooks([...books, newBook.data])
     setFormState({ title: '', author: '', genre: '' })
   }
