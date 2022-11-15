@@ -11,6 +11,8 @@ const BookDetails = (props) => {
 
     let navigate = useNavigate()
     const [book, setBook] = useState({})
+    const [books, updateBooks] = useState([])
+    const [formState, setFormState] = useState({ title: '', author: '', genre: '' })
     let { id } = useParams()
     console.log(id)
 
@@ -23,7 +25,17 @@ const BookDetails = (props) => {
     }, [])
     const handleDelete = async (id) => {
         await axios.delete(`https://the-book-hub-generalassembly.herokuapp.com/api/books/${id}`)
-        navigate('/')
+        navigate('/books')
+    }
+    const handleChange = (event) => {
+        setFormState({ ...formState, [event.target.id]: event.target.value })
+    }
+
+    const handleUpdate = async (event, id) => {
+        event.preventDefault()
+        let response = await axios.put(`https://the-book-hub-generalassembly.herokuapp.com/api/books/${id}`, formState)
+        updateBooks([books, response])
+        setFormState({ title: '', author: '', genre: '' })
     }
     return (
         <div>
@@ -31,6 +43,15 @@ const BookDetails = (props) => {
             <h1>{book.title}</h1>
             <h2>{book.author}</h2>
             <h2>{book.genre}</h2>
+            <form onSubmit={(event) => { handleUpdate(event, book.id) }} className="update-form">
+                <label htmlFor="title">Title:</label>
+                <input id="title" value={formState.title} onChange={handleChange} />
+                <label htmlFor="author">Author:</label>
+                <input id="author" value={formState.author} onChange={handleChange} />
+                <label htmlFor="genre">Genre:</label>
+                <input id="genre" value={formState.genre} onChange={handleChange} />
+                <button type="submit">Update Book</button>
+            </form>
             <button onClick={() => handleDelete(book.id)} className="delete-btn">Delete</button>
         </div>
     )
