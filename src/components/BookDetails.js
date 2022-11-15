@@ -13,7 +13,7 @@ const BookDetails = (props) => {
 
     useEffect(() => {
         const detailsCall = async () => {
-            await axios.get(`api/books/${id}`).then
+            await axios.get(`https://the-book-hub-generalassembly.herokuapp.com/api/books/${id}`).then
                 ((res) => { setBook(res.data) })
         }
         detailsCall()
@@ -23,6 +23,8 @@ const BookDetails = (props) => {
         <div>
             <h1>details</h1>
             <h1>{book.title}</h1>
+            <h2>{book.author}</h2>
+            <h2>{book.genre}</h2>
         </div>
     )
 
