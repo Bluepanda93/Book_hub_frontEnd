@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import axios from 'axios'
 
-
 const NewBookForm = () => {
   // const [books, updateBooks] = useState([])
   const [formState, setFormState] = useState({
@@ -25,12 +24,13 @@ const NewBookForm = () => {
   //   })
   // }
 
-
-
   const handleSubmit = async (event) => {
     event.preventDefault()
     let newBook = await axios
-      .post('https://the-book-hub-generalassembly.herokuapp.com/api/books', formState)
+      .post(
+        'https://the-book-hub-generalassembly.herokuapp.com/api/books',
+        formState
+      )
       .then((response) => {
         return response
       })
