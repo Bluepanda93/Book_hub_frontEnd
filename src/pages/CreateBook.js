@@ -30,7 +30,7 @@ const CreateBook = (props) => {
       genre: ''
     })
 
-    props.updateBook()
+    // props.updateBook()
   }
 
   return (
