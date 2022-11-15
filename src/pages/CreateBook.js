@@ -1,10 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
-import { BASE_URL } from './globals'
-import link from 'react-router-dom'
+
 
 const NewBookForm = () => {
-  const [books, updateBooks] = useState([])
+  // const [books, updateBooks] = useState([])
   const [formState, setFormState] = useState({
     title: '',
     author: '',
@@ -50,7 +49,7 @@ const NewBookForm = () => {
         <input id="title" value={formState.title} onChange={handleChange} />
         <label htmlFor="author">Author:</label>
         <input id="author" value={formState.author} onChange={handleChange} />
-        <label htmlFor="genre">Title:</label>
+        <label htmlFor="genre">Genre:</label>
         <input id="genre" value={formState.genre} onChange={handleChange} />
         <button type="submit">Add Book</button>
       </form>
