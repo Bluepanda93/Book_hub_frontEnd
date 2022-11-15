@@ -30,7 +30,7 @@ const NewBookForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     let newBook = await axios
-      .post('api/books', formState)
+      .post('https://the-book-hub-generalassembly.herokuapp.com/api/books', formState)
       .then((response) => {
         return response
       })
