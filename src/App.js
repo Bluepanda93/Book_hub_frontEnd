@@ -4,6 +4,7 @@ import './App.css'
 import Home from './pages/Home'
 import Books from './pages/BooksPage'
 import CreateBook from './pages/CreateBook'
+import BookDetails from './components/BookDetails'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/add_book" element={<CreateBook />} />
           <Route path="/books" element={<Books />} />
+          <Route path='books/:id' element={<BookDetails />} />
         </Routes>
       </div>
     </div>
