@@ -16,7 +16,7 @@ const CreateBook = (props) => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     let newBook = await axios
-      .post(`${BASE_URL}/books`, {
+      .post(`${BASE_URL}/api/books`, {
         ...formState,
         bookId: props.booksId
       })
