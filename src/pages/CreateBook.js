@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { BASE_URL } from './globals'
+import books from './BooksPage'
 
 const CreateBook = (props) => {
   const [formState, setFormState] = useState({
@@ -12,6 +13,19 @@ const CreateBook = (props) => {
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
+
+  // const updateBook = async (event, id) => {
+  //   event.preventDefault()
+  //   let response = await axios.put(`${BASE_URL}/books/${id}`, formState)
+  //   updateBook([books, response])
+  //   setFormState({
+  //     title: '',
+  //     author: '',
+  //     genre: ''
+  //   })
+  // }
+
+
 
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -30,7 +44,7 @@ const CreateBook = (props) => {
       genre: ''
     })
 
-    props.updateBook()
+    // newBook()
   }
 
   return (
