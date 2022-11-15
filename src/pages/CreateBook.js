@@ -15,6 +15,19 @@ const NewBookForm = () => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
 
+  // const updateBook = async (event, id) => {
+  //   event.preventDefault()
+  //   let response = await axios.put(`${BASE_URL}/books/${id}`, formState)
+  //   updateBook([books, response])
+  //   setFormState({
+  //     title: '',
+  //     author: '',
+  //     genre: ''
+  //   })
+  // }
+
+
+
   const handleSubmit = async (event) => {
     event.preventDefault()
     let newBook = await axios
