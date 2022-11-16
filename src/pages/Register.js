@@ -46,7 +46,7 @@ const Register = (props) => {
         </button>
         <div className="signin col">
           <div className="card-overlay centered">
-            <form className="col">
+            <form className="col" onSubmit={handleSubmit}>
               <div className="input-wrapper">
                 <label htmlFor="name">Name</label>
                 <input
