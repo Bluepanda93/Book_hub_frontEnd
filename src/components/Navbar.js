@@ -8,7 +8,7 @@ const Navbar = ({ props, authenticated, user, handleLogOut }) => {
     authenticatedOptions = (
       <nav>
         <h3>Welcome {user.email}!</h3>
-        <Link to="/">Feed</Link>
+        {/* <Link to="/">Feed</Link> */}
         <Link onClick={handleLogOut} to="/">
           Sign Out
         </Link>
