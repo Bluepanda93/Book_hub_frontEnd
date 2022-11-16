@@ -18,7 +18,7 @@ const Navbar = ({ props, authenticated, user, handleLogOut }) => {
 
   const publicOptions = (
     <nav>
-      <Link to="/">Home</Link>
+      <Link to="/"></Link>
     </nav>
   )
 

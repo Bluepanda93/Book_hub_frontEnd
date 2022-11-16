@@ -32,7 +32,7 @@ const Register = (props) => {
       password: '',
       confirmPassword: ''
     })
-    navigate('/login')
+    navigate('/')
   }
 
   return props.regisTrigger ? (
