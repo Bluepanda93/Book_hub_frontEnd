@@ -9,6 +9,7 @@ import BookDetails from './components/BookDetails'
 import Register from './pages/Register'
 import { CheckSession } from './services/Auth'
 import Login from './pages/Login'
+import BookList from './components/BookLists'
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -60,6 +61,7 @@ const App = () => {
               />
             }
           />
+          <Route path="/mybooks" element={<BookList />} />
           <Route path="/add_book" element={<CreateBook />} />
           <Route
             path="/books"
