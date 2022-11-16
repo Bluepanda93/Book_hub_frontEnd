@@ -2,7 +2,26 @@ import { Link } from 'react-router-dom'
 import Register from '../pages/Register'
 import { useState } from 'react'
 
-const Navbar = (props) => {
+const Navbar = ({ props, authenticated, user, handleLogOut }) => {
+  let authenticatedOptions
+  if (user) {
+    authenticatedOptions = (
+      <nav>
+        <h3>Welcome {user.email}!</h3>
+        <Link to="/">Feed</Link>
+        <Link onClick={handleLogOut} to="/">
+          Sign Out
+        </Link>
+      </nav>
+    )
+  }
+
+  const publicOptions = (
+    <nav>
+      <Link to="/">Home</Link>
+    </nav>
+  )
+
   const [registerPopupButton, setRegisterPopupButton] = useState(false)
   return (
     <nav className="navbar">
@@ -30,6 +49,7 @@ const Navbar = (props) => {
           </button>
         </Link>
       </div>
+      {authenticated && user ? authenticatedOptions : publicOptions}
     </nav>
   )
 }
