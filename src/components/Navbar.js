@@ -1,8 +1,15 @@
 import { Link } from 'react-router-dom'
+import Register from '../pages/Register'
+import { useState } from 'react'
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const [registerPopupButton, setRegisterPopupButton] = useState(false)
   return (
     <nav className="navbar">
+      <Register
+        regisTrigger={registerPopupButton}
+        setRegisTrigger={setRegisterPopupButton}
+      ></Register>
       <h4>BOOK HUB</h4>
       <div>
         <Link to="/" className="linky">
@@ -15,7 +22,12 @@ const Navbar = () => {
           Review
         </Link>
         <Link>
-          <button className="review-btn">Register</button>
+          <button
+            className="review-btn"
+            onClick={() => setRegisterPopupButton(true)}
+          >
+            Register
+          </button>
         </Link>
       </div>
     </nav>
