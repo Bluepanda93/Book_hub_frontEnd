@@ -40,6 +40,9 @@ const Navbar = ({ props, authenticated, user, handleLogOut }) => {
         <Link to="/books" className="linky">
           Review
         </Link>
+        <Link to="/mybooks" className="linky">
+          My Books
+        </Link>
         <Link>
           <button
             className="review-btn"
