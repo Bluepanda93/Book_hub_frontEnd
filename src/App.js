@@ -67,7 +67,7 @@ const App = () => {
             path="/books"
             element={<Books user={user} authenticated={authenticated} />}
           />
-          <Route path="books/:id" element={<BookDetails />} />
+          <Route path="books/:id" element={<BookDetails user={user} />} />
         </Routes>
       </div>
     </div>

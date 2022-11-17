@@ -2,7 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 
 const NewBookForm = (props) => {
-  // const [books, updateBooks] = useState([])
+  const [books, updateBooks] = useState([])
   const [formState, setFormState] = useState({
     title: '',
     author: '',
