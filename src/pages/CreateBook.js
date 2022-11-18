@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import axios from 'axios'
+import bgImg from '../images/bookimg.jpeg'
 
 const NewBookForm = (props) => {
   const [books, updateBooks] = useState([])
@@ -42,18 +43,29 @@ const NewBookForm = (props) => {
     setFormState({ title: '', author: '', genre: '' })
   }
   return (
-    <div>
-      <h1>New Book</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="title">Title:</label>
-        <input id="title" value={formState.title} onChange={handleChange} />
-        <label htmlFor="author">Author:</label>
-        <input id="author" value={formState.author} onChange={handleChange} />
-        <label htmlFor="genre">Genre:</label>
-        <input id="genre" value={formState.genre} onChange={handleChange} />
-        <button type="submit">Add Book</button>
-      </form>
-    </div>
+    <section>
+      <div className="inputForm">
+        <div className="col-1">
+          <h2>New Book</h2>
+          <form onSubmit={handleSubmit} id="form" className="flex flex-col">
+            <label htmlFor="title">Title:</label>
+            <input id="title" value={formState.title} onChange={handleChange} />
+            <label htmlFor="author">Author:</label>
+            <input
+              id="author"
+              value={formState.author}
+              onChange={handleChange}
+            />
+            <label htmlFor="genre">Genre:</label>
+            <input id="genre" value={formState.genre} onChange={handleChange} />
+            <button type="submit">Add Book</button>
+          </form>
+        </div>
+        <div className="col-2">
+          <img src={bgImg} alt="neighborhood" />
+        </div>
+      </div>
+    </section>
   )
 }
 

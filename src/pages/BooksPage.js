@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import './styles/BooksPage.css'
 
 const Books = ({ user, authenticated }) => {
   const [books, setBooks] = useState([])
@@ -39,9 +40,13 @@ const Books = ({ user, authenticated }) => {
       </div>
     </div>
   ) : (
-    <div className="protected">
-      <h3>Oops! You must be signed in to do that!</h3>
-      <button onClick={() => navigate('/')}>Sign In</button>
+    <div className="protected-container">
+      <div className="protected">
+        <h3>Oops! You must be signed in to do that!</h3>
+        <div>
+          <button onClick={() => navigate('/')}>Back</button>
+        </div>
+      </div>
     </div>
   )
 }

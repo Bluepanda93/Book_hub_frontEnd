@@ -106,6 +106,7 @@
     background-color: #f7f3f0;
     font-size: 20px;
     cursor: pointer;
+    color: black;
   }
 
   .close-btn:hover{

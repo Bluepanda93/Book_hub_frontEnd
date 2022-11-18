@@ -89,7 +89,10 @@ const Register = (props) => {
                   required
                 />
               </div>
-              <button disabled={!formValues.email || !formValues.password}>
+              <button
+                disabled={!formValues.email || !formValues.password}
+                // onClick={() => props.setRegisTrigger(false)}
+              >
                 Register
               </button>
             </form>
