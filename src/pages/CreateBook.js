@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 import bgImg from '../images/bookimg.jpeg'
+import './styles/CreateBooksPage.css'
 
 const NewBookForm = (props) => {
   const [books, updateBooks] = useState([])

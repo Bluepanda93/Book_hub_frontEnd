@@ -6,6 +6,12 @@
   margin: 0;
 }
 
+section {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .popup-form{
     position: fixed;
     top: 0;
@@ -22,84 +28,76 @@
 .popup-inner{
     position: relative;
     padding: 32px;
-    width: 350%;
-    max-width: 640px;
+
     background-color: #f7f3f0;
     height: 70vh;
     border-radius: 15px;
     color: black;
+    max-width: 978px;
+    width: 100vw;
+  
+ 
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+
 }
 
-  
-  form,
-  .input-wrapper {
-    margin: auto;
-    width: 80%;
-    padding: 20px;
-  }
-  
-  form label {
-    align-self: flex-start;
-  }
-  
-  .input-wrapper {
-    width: 80%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .input-wrapper input {
-    padding: 0.6em 1.2em;
-    margin: 2em auto;
-    width: 100%;
-   border-radius: 10px;
-   border: 1px solid rgb(184, 129, 1);
-    font-size: 1.1rem;
-    outline: none;
-  }
-  
-  input::placeholder {
-    opacity: 0.7;
-  }
-  
-  form button {
+#form {
+  max-width: 320px;
+  width: 100vw;
+  margin: 2em auto;
+}
 
-    background: #e09f3e;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 20px;
-    box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.2);
-    color: white;
-    align-self: center;
-  
-  }
-  
-  form button:hover {
-    color:  #f2e9e4;
-    background-color: #a4680e;
-    transition: 0.4s;
-  }
-  
-  form button:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-  }
+#form > input,
+.btn {
+  border: 1px solid #e9ecef;
+  padding: 0.9em 1em;
+  /* border-radius: 50px; */
+}
 
-  .signin {
-  
-    align-items: center;
-    justify-content: center;
-  }
+#form input:focus {
+  outline: none;
+  border: none;
+}
+.relocate {
+  background-color: #266150;
+  padding: 10px 10px;
+  color: #fdf8f5;
+  border: none;
+}
 
-  .col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-  }
+#form .btn {
+  background-color: #266150;
+  color: #fdf8f5;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  gap: 1em;
+}
+
+.flex-col {
+  flex-direction: column;
+  transform: translateY(-90px);
+}
+
+.inputForm .col-1 {
+  margin: auto;
+  padding: 3em 0;
+
+}
+
+.inputForm .col-2 img {
+  width: 480px;
+  height: 100%;
+  object-fit: cover;
+  align-self: flex-end;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: none;
+}
 
   .close-btn{
     border: none;

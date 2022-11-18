@@ -36,59 +36,55 @@ const Register = (props) => {
   }
 
   return props.regisTrigger ? (
-    <div className="popup-form">
-      <div className="popup-inner">
-        <button
-          className="close-btn"
-          onClick={() => props.setRegisTrigger(false)}
-        >
-          X
-        </button>
-        <div className="signin col">
-          <div className="card-overlay centered">
-            <form className="col" onSubmit={handleSubmit}>
-              <div className="input-wrapper">
-                <label htmlFor="name">Name</label>
-                <input
-                  onChange={handleChange}
-                  name="name"
-                  type="text"
-                  placeholder="John Doe"
-                  value={formValues.name}
-                  required
-                />
-              </div>
-              <div className="input-wrapper">
-                <label htmlFor="email">Email</label>
-                <input
-                  onChange={handleChange}
-                  name="email"
-                  type="email"
-                  placeholder="example@example.com"
-                  value={formValues.email}
-                  required
-                />
-              </div>
-              <div className="input-wrapper">
-                <label htmlFor="password">Password</label>
-                <input
-                  onChange={handleChange}
-                  type="password"
-                  name="password"
-                  value={formValues.password}
-                  required
-                />
-              </div>
-              <div className="input-wrapper">
-                <label htmlFor="password">Confirm Password</label>
-                <input
-                  onChange={handleChange}
-                  type="password"
-                  name="password"
-                  value={formValues.password}
-                  required
-                />
-              </div>
+    <section>
+      <div className="popup-form">
+        <div className="popup-inner">
+          <button
+            className="close-btn"
+            onClick={() => props.setRegisTrigger(false)}
+          >
+            X
+          </button>
+          <div className="col-1">
+            <form id="form" className="flex flex-col" onSubmit={handleSubmit}>
+              <label htmlFor="name">Name</label>
+              <input
+                onChange={handleChange}
+                name="name"
+                type="text"
+                placeholder="John Doe"
+                value={formValues.name}
+                required
+              />
+
+              <label htmlFor="email">Email</label>
+              <input
+                onChange={handleChange}
+                name="email"
+                type="email"
+                placeholder="example@example.com"
+                value={formValues.email}
+                required
+              />
+
+              <label htmlFor="password">Password</label>
+              <input
+                onChange={handleChange}
+                type="password"
+                name="password"
+                value={formValues.password}
+                required
+              />
+
+              <label htmlFor="password">Confirm Password</label>
+              <input
+                onChange={handleChange}
+                type="password"
+                name="password"
+                value={formValues.password}
+                required
+              />
+
               <button
                 disabled={!formValues.email || !formValues.password}
                 // onClick={() => props.setRegisTrigger(false)}
@@ -100,7 +96,7 @@ const Register = (props) => {
         </div>
         {props.children}
       </div>
-    </div>
+    </section>
   ) : (
     ''
   )
