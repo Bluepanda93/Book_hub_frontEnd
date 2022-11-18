@@ -28,13 +28,19 @@ const Books = ({ user, authenticated }) => {
 
   return user && authenticated ? (
     <div>
-      <h1>This is the books page</h1>
+      <div className="h1">
+        <h1>Book Hub Library</h1>
+      </div>
       <div className="booksHolder">
         {books.map((book) => (
-          <div key={book.id} onClick={() => getBookDetails(book.id)}>
-            <h2>{book.title}</h2>
-            <h3>{book.author}</h3>
-            <h3>{book.genre}</h3>
+          <div
+            key={book.id}
+            onClick={() => getBookDetails(book.id)}
+            className="bigspace"
+          >
+            <h3>{book.title}</h3>
+            <h4>{book.author}</h4>
+            <h4>{book.genre}</h4>
           </div>
         ))}
       </div>
