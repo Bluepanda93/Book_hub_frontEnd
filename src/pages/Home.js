@@ -1,8 +1,6 @@
 import Login from './Login'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
-import Register from './Register'
 
 const Home = () => {
   const [popupButton, setPopupButton] = useState(false)

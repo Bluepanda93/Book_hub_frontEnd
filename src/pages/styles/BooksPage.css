@@ -1,0 +1,84 @@
+.protected{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f3f0;
+    height: 20vh;
+    border-radius: 15px;
+    color: black;
+    padding: 20px;
+    transform: translateY(100px);
+}
+
+.protected-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    margin-left: 20px;
+    background: #e09f3e;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 12px;
+    box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.04);
+    color: white;
+}
+
+button:hover{
+    color:  #f2e9e4;
+    background-color: #a4680e;
+    transition: 0.4s;
+}
+.protected h3{
+font-size: 20px;
+font-weight: 200;
+}
+
+
+
+.bigspace{
+    display: flex;
+    flex-direction: column;
+
+justify-content: center;
+align-items: center;
+border: 1px solid rgb(188, 118, 6);
+padding: 8px 0;
+transition: all 0.3s linear;
+
+border-radius: 20px;
+}
+
+.bigspace:hover{
+    border: 1px solid #fff;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.576);
+    cursor: pointer;
+    scale: 0.98;
+    transition: 0.2s;
+    color: rgb(177, 119, 3);
+  
+}
+
+.bigspace h3{
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: rgb(242, 227, 205);
+
+}
+.bigspace h4{
+    margin-bottom: 8px; 
+}
+
+.h1{
+display: flex;
+
+color: #ef9e24;
+
+justify-content: center;
+margin-top: 40px;
+margin-bottom: 30px;
+}
